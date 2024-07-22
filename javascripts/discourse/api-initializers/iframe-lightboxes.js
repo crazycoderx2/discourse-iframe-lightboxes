@@ -34,7 +34,7 @@ export default apiInitializer("0.8", (api) => {
       return button;
     };
 
-    api.decorateWidget('topic-title', helper => {
+    api.decorateWidget('topic-title:after', helper => {
       return helper.h('div#header-links', [
         helper.h('a', {
           href:'https://example.com/index.html', 
