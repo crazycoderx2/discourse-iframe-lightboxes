@@ -33,7 +33,7 @@ export default apiInitializer("0.8", (api) => {
 
       return button;
     };
-
+/*
     api.decorateWidget('topic-title:after', helper => {
       return helper.h('div#header-links', [
         helper.h('a', {
@@ -46,7 +46,7 @@ export default apiInitializer("0.8", (api) => {
         })
         ]);
     });
-
+*/
     api.decorateCookedElement(
       (post) => {
         const iframes = post.querySelectorAll("iframe");
