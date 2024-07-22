@@ -34,6 +34,22 @@ export default apiInitializer("0.8", (api) => {
       return button;
     };
 
+    api.decorateWidget('home-logo:after', helper => {
+    const showExtraInfo = helper.attrs.topic;
+        if(!showExtraInfo) {
+            return helper.h('div#header-links', [
+                helper.h('a', {
+                    href:'https://example.com/index.html', 
+                    text:'Tracks'
+                }),
+                helper.h('a.active', {
+                    href:'https://example.com/forum', 
+                    text:'Forum'
+                })
+            ]);
+        }
+});
+
     api.decorateCookedElement(
       (post) => {
         const iframes = post.querySelectorAll("iframe");
